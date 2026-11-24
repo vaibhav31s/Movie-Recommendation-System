@@ -34,7 +34,7 @@ $('.view').click(function(){
 $('.fullserie .close').click(function(){
   $('.fullserie').removeClass('active');
 });
-  fetch("https://api.themoviedb.org/3/movie/19995?api_key=06412c2ac60d3b3a66c7fb129dcaca28&language=en-US")
+  fetch("https://api.themoviedb.org/3/movie/19995?api_key=YOUR_TMDB_API_KEY&language=en-US")
     .then((response) => response.json())
     .then((data) => {
     const value = data.poster_path;

@@ -6,6 +6,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import random
+import os
 
 app = flask.Flask(__name__, template_folder='templates')
 
@@ -48,6 +49,11 @@ def get_suggestions():
     return list(data['title'].str.capitalize())
 
 app = Flask(__name__)
+
+@app.context_processor
+def inject_tmdb_api_key():
+    return {'tmdb_api_key': os.environ.get('TMDB_API_KEY', '')}
+
 @app.route("/")
 @app.route("/index")
 def index():

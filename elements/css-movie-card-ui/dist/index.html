@@ -32,7 +32,7 @@
 <!-- partial -->
 <script>
 
-fetch("https://api.themoviedb.org/3/movie/"+{{movieid[0]}}+"?api_key=06412c2ac60d3b3a66c7fb129dcaca28&language=en-US")
+fetch("https://api.themoviedb.org/3/movie/"+{{movieid[0]}}+"?api_key=YOUR_TMDB_API_KEY&language=en-US")
     .then((response) => response.json())
     .then((data) => {
     const value = data.poster_path;
@@ -43,7 +43,7 @@ fetch("https://api.themoviedb.org/3/movie/"+{{movieid[0]}}+"?api_key=06412c2ac60
 	 document.getElementById('image1').style.backgroundRepeat = "no-repeat";
 	  document.getElementById('image1').style.backgroundSize = "cover";
 });
-fetch("https://api.themoviedb.org/3/movie/"+{{movieid[1]}}+"?api_key=06412c2ac60d3b3a66c7fb129dcaca28&language=en-US")
+fetch("https://api.themoviedb.org/3/movie/"+{{movieid[1]}}+"?api_key=YOUR_TMDB_API_KEY&language=en-US")
     .then((response) => response.json())
     .then((data) => {
     const value = data.poster_path;
@@ -54,7 +54,7 @@ fetch("https://api.themoviedb.org/3/movie/"+{{movieid[1]}}+"?api_key=06412c2ac60
 	 document.getElementById('image2').style.backgroundRepeat = "no-repeat";
 	  document.getElementById('image2').style.backgroundSize = "cover";
 });
-fetch("https://api.themoviedb.org/3/movie/"+{{movieid[2]}}+"?api_key=06412c2ac60d3b3a66c7fb129dcaca28&language=en-US")
+fetch("https://api.themoviedb.org/3/movie/"+{{movieid[2]}}+"?api_key=YOUR_TMDB_API_KEY&language=en-US")
     .then((response) => response.json())
     .then((data) => {
     const value = data.poster_path;
