@@ -70,12 +70,12 @@ def index():
         types=[]
         mid=[]
         for i in range(len(result_final)):
-            names.append(result_final.iloc[i][0])
-            dates.append(result_final.iloc[i][1])
-            ratings.append(result_final.iloc[i][2])
-            overview.append(result_final.iloc[i][3])
-            types.append(result_final.iloc[i][4])
-            mid.append(result_final.iloc[i][5])
+            names.append(result_final.iloc[i, 0])
+            dates.append(result_final.iloc[i, 1])
+            ratings.append(result_final.iloc[i, 2])
+            overview.append(result_final.iloc[i, 3])
+            types.append(result_final.iloc[i, 4])
+            mid.append(result_final.iloc[i, 5])
     suggestions = get_suggestions()
     
     return render_template('index.html',suggestions=suggestions,movie_type=types[5:],movieid=mid,movie_overview=overview,movie_names=names,movie_date=dates,movie_ratings=ratings,search_name=m_name)
@@ -105,12 +105,12 @@ def main():
             types=[]
             mid=[]
             for i in range(len(result_final)):
-                names.append(result_final.iloc[i][0])
-                dates.append(result_final.iloc[i][1])
-                ratings.append(result_final.iloc[i][2])
-                overview.append(result_final.iloc[i][3])
-                types.append(result_final.iloc[i][4])
-                mid.append(result_final.iloc[i][5])
+                names.append(result_final.iloc[i, 0])
+                dates.append(result_final.iloc[i, 1])
+                ratings.append(result_final.iloc[i, 2])
+                overview.append(result_final.iloc[i, 3])
+                types.append(result_final.iloc[i, 4])
+                mid.append(result_final.iloc[i, 5])
                
             return flask.render_template('positive.html',movie_type=types[5:],movieid=mid,movie_overview=overview,movie_names=names,movie_date=dates,movie_ratings=ratings,search_name=m_name)
 
